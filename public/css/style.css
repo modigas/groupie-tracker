@@ -1,0 +1,146 @@
+:root {
+    --padding: 20px;
+    --fontsizeLarge:15vw;
+    --fontsizeRegular:1vw;
+    --width: 40vw;
+    --imgwidth: 20vw;
+    --font: 'Press Start 2P', cursive;
+}
+
+body {
+    text-align: center;
+    /* background-color: rgb(34, 34, 34); */
+    background-image: url(prism.png);
+    background-repeat: repeat;
+    font-family: var(--font);
+    width: 100vw;
+}
+
+a {
+    color: rgb(105, 255, 205);
+    text-decoration: none;
+}
+
+h1.main-title {
+    /* text-shadow: 0 0 5px rgb(146, 255, 255); */
+    margin: 20px;
+}
+
+h1.main-title:hover {
+    text-shadow: 0 0 15px rgb(146, 255, 255);
+}
+
+h2.error-message {
+    color: rgb(104, 104, 104);
+} 
+
+h1.error-status {
+    text-shadow: 0 0 1em rgb(255, 0, 170);
+    font-size: var(--fontsizeLarge);
+}
+
+h1.error-status:hover {
+    text-shadow: 0 0 2em rgb(0, 81, 255);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.artist-box {
+    align-self: center;
+    text-align: center;
+    margin: 5px;
+    padding: 20px;
+    font-family: var(--font);
+}
+
+.artist-box:hover .artist-content {
+    box-shadow: 0 0 30px rgb(0, 217, 255); 
+}
+
+.artist-content {
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(122, 122, 122);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0, 217, 255);
+    width: 250px;
+    height: 330px;
+    /* min-width: ;  */
+}
+
+.artist-info {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    padding: var(--padding);
+    font-size: var(--fontsizeRegular);
+    width: var(--width);
+    background-color: rgb(122, 122, 122);
+    box-shadow: 0 0 20px rgb(0, 217, 255);
+    font-family: var(--font);
+}
+.artist-info > img {
+    width: var(--imgwidth);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.home {
+    align-self: flex-start;
+    margin-left: 50px;
+    /* float: left; */
+    /* align-self: flex-start; */
+}
+
+.title {
+    flex: 1;
+    text-align: center;
+}
+
+.city {
+    margin: 1px;
+}
+
+.date {
+    /* color: rgb(64, 0, 167); */
+    margin: 1px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    display: inline-block; 
+    width: 1em;
+    margin-left: 5em;
+}
+
+li.city:hover {
+    text-shadow: 0 0 3px rgb(255, 255, 255);  
+}
+
+img {
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --width: 80vw;
+        --imgwidth: 70vw;
+        --fontsizeRegular: 4vw;
+        --padding: 1vw;
+    }
+}

@@ -1,0 +1,24 @@
+{{ template "head" . }}
+{{ template "navbar" . }}
+
+<div class="artist-info">
+    <h2 class="artist-name">{{.ArtistInfo.Name}}</h2>
+    <img src="{{.ArtistInfo.Image}}">
+    <h2 class="members">Members:</h2>
+    <ul>
+    {{ range .ArtistInfo.Members }}
+        <li>{{.}}</li>
+    {{end}}
+    </ul>
+    <h2>Tour</h2>
+    <ul>
+    {{ range $k, $v := .DatesLocations.DatesLocations }}
+        <li class="city"><b>{{$k}}</b></li>
+        <ul>
+        {{ range $v }}
+            <li class="date">{{ . }}</li>
+        {{ end }}
+        </ul>
+    {{ end }}
+    </ul>
+</div>

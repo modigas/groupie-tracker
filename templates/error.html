@@ -1,0 +1,6 @@
+{{ define "error" }}
+{{ template "head" . }}
+{{ template "navbar" . }}
+    <h1 class="error-status">{{ .Status }}</h1>
+    <h2 class="error-message">{{ .Message }}</h2>
+{{ end }}

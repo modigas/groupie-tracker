@@ -1,0 +1,1 @@
+docker build -t groupie-tracker . && docker run -p 9000:9000 groupie-tracker

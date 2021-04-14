@@ -1,0 +1,14 @@
+{{ define "content" }}
+
+    {{ range . }}
+    <div class="artist-box">
+        <a href="/artist?id={{ .ID }}">
+            <div class="artist-content">
+                <img src="{{ .Image }}">
+                <h4 class="name">{{ .Name }}</h4>
+            </div>
+        </a>
+    </div>
+    {{ end }}
+
+{{ end }}
